@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+$bgColor: rgb(17, 78, 109);
+$lightBgColor: rgb(228, 239, 244);
+$shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+  rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+  rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+$fontFamily: "Encode Sans Expanded", sans-serif;
+$ratingColor: #ffc908;
+$cardShadow: 0 0 12px 3px rgba($bgColor, $alpha: 0.6);
+
+body {
+  font-family: $fontFamily;
+}
+.rating-color {
+  color: $ratingColor;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.product:hover {
+  box-shadow: $shadow !important;
+  border: 1px solid $bgColor !important;
+}
+.product {
+  .btn {
+    opacity: 0 !important;
+    transition: transform 1s, opacity 1s !important;
+    transform: translateY(100%) !important;
+  }
+}
+.product:hover .btn {
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+}
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.text-main {
+  color: $bgColor;
+  &:hover {
+    color: $bgColor !important;
+  }
+}
+.font-sm {
+  font-size: 14px;
+}
+.bg-main {
+  background-color: $bgColor !important;
+}
+.bg-main-light {
+  background-color: $lightBgColor !important;
+}
+
+.border-main {
+  border: 1px solid $bgColor;
+}
+
+.heartIcon {
+  top: 0px;
+  right: 0px;
+}
+
+.badge {
+  top: -60% !important;
+  left: 100%;
+  font-size: 10px !important;
+}
+
+.countBtn:hover {
+  border: 1px solid rgba($bgColor, $alpha: 0.6);
+}
+
+.form-control {
+  &:focus {
+    box-shadow: 0 0 0 0.15rem rgba(10, 173, 10, 0.5) !important;
+  }
+}
+
+.overlay {
+  background-color: rgba($color: #000, $alpha: 0.2);
+}
+
+.slick-dots li button::before {
+  content: "";
+  width: 15px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li button {
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 2px;
+}
+
+.network {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+}
+
+.space {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.catgCard {
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    transition: transform 500ms;
+  }
+}
+
+.prCard:hover,
+.catgCard:hover {
+  box-shadow: $cardShadow !important;
+}
+.prCard,
+.catgCard {
+  transition: box-shadow 500ms;
+}
+
+footer {
+  .partners {
+    img {
+      width: 15%;
+    }
+  }
+
+  .store {
+    .google {
+      width: 110px;
+    }
+
+    .app {
+      width: 90px;
+    }
+  }
+}
+
+button:disabled {
+  opacity: 0.5;
+  background-color: rgba($color: $lightBgColor, $alpha: 1);
+  cursor: not-allowed;
+  &:hover {
+    background-color: $lightBgColor !important;
+  }
+}
+
+.scrollUp {
+  right: 20px;
+  bottom: 30px;
+}
